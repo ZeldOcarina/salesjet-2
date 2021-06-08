@@ -2,23 +2,39 @@
   margin-top: 10rem;
   display: flex;
   justify-content: center;
-  gap: 10rem;
+  gap: 5rem;
+
+  &--reverse {
+    flex-direction: row-reverse;
+  }
 
   &__images-container {
-    width: 45rem;
-    height: 32rem;
+    width: 55rem;
+    height: 30rem;
     position: relative;
+
+    &--reverse {
+      margin-left: 10rem;
+    }
   }
 
   &__image {
     width: 70%;
+
+    &--reverse {
+    }
   }
 
   &__svg {
     position: absolute;
     bottom: 0;
-    right: 0;
-    width: 70%;
+    right: 10rem;
+    height: 70%;
+
+    &--reverse {
+      left: -10rem;
+      right: 0;
+    }
   }
 
   &__right-container {
