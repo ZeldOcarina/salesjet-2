@@ -1,0 +1,34 @@
+.home-video {
+  &__container {
+    @include container(10rem, 10rem);
+    display: flex;
+    align-items: center;
+    gap: 6rem;
+  }
+
+  &__left-container {
+    width: 100%;
+    border: 1px solid #9e9e9e;
+    position: relative;
+
+    .thumbnail {
+      &__play-icon-container {
+        transform: translate(-50%, -44%);
+      }
+    }
+  }
+
+  &__right-container {
+  }
+
+  &__title {
+    margin-bottom: 2rem;
+  }
+
+  &__text {
+    margin-bottom: 4rem;
+  }
+
+  &__btn {
+  }
+}

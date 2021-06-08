@@ -1,0 +1,41 @@
+.home-numbers {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 2fr repeat(4, 1fr);
+  align-items: center;
+  gap: 4rem;
+  padding: 6rem 5%;
+
+  &__text {
+    font-size: 2.2rem;
+    font-weight: 500;
+  }
+
+  &__section {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(2, max-content);
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+    align-items: center;
+    row-gap: 1rem;
+  }
+
+  &__icon {
+    justify-self: flex-end;
+  }
+
+  &__item-number {
+    color: $color-secondary-dark;
+    font-weight: $bold;
+    justify-self: center;
+  }
+
+  &__item-text {
+    font-family: $body-alt;
+    letter-spacing: 0;
+    display: block;
+    grid-column: 1 / 4;
+  }
+}

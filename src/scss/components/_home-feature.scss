@@ -1,0 +1,43 @@
+.home-feature {
+  margin-top: 10rem;
+  display: flex;
+  justify-content: center;
+  gap: 10rem;
+
+  &__images-container {
+    width: 45rem;
+    height: 32rem;
+    position: relative;
+  }
+
+  &__image {
+    width: 70%;
+  }
+
+  &__svg {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 70%;
+  }
+
+  &__right-container {
+    width: 48%;
+  }
+
+  &__pretitle {
+    font-weight: 600;
+    font-family: $body-alt;
+    letter-spacing: 1px;
+    font-size: 2.2rem;
+  }
+
+  &__title {
+    color: $color-secondary-dark;
+    margin: 1rem 0 1rem 0;
+  }
+
+  &__paragraph {
+    font-size: 2.3rem;
+  }
+}

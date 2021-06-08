@@ -1,0 +1,42 @@
+.navbar {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  z-index: 3;
+
+  &__right-container {
+    margin-right: 15%;
+    margin-top: 7rem;
+  }
+
+  &__items {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 3rem;
+    font-size: 2rem;
+  }
+
+  &__item {
+  }
+
+  &__link {
+    font-weight: 200;
+    transition: opacity 0.2s ease-in-out;
+
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+
+  &__btn {
+    padding: 2rem 3rem;
+    transition: transform 0.2s ease-in-out;
+
+    &:hover {
+      transform: translateY(-0.5rem);
+      opacity: 1;
+    }
+  }
+}
