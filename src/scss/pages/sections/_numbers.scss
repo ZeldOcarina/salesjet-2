@@ -24,6 +24,13 @@
 
   &__icon {
     justify-self: flex-end;
+
+    @include respond(big-desktop) {
+      width: 3rem;
+    }
+    @include respond(big-tv) {
+      width: 3rem;
+    }
   }
 
   &__item-number {

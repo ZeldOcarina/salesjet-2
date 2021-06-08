@@ -8,6 +8,12 @@
     align-items: center;
   }
 
+  &__logo {
+    @include respond(big-tv) {
+      width: 20rem;
+    }
+  }
+
   &__logo-container {
     margin-right: 5rem;
   }
@@ -25,5 +31,11 @@
 
   &__item {
     font-size: 2rem;
+  }
+
+  &__image {
+    @include respond(big-tv) {
+      width: 20rem;
+    }
   }
 }

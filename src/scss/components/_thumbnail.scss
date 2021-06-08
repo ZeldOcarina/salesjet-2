@@ -1,4 +1,8 @@
 .thumbnail {
+  @include respond(big-tv) {
+    width: 100%;
+  }
+
   &__thumbnail-container {
     position: relative;
   }

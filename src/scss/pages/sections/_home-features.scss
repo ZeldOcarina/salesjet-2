@@ -1,6 +1,6 @@
 .home-features {
   &__container {
-    @include container(8rem, 4rem);
+    @include container(8rem, 12rem);
   }
 
   &__title,
@@ -13,7 +13,7 @@
   }
 
   &__btn {
-    margin: 0 auto;
+    margin: 0 auto 13rem auto;
     display: block;
     width: max-content;
   }

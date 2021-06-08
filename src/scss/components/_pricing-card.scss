@@ -7,6 +7,11 @@
   transition: all 0.3s ease-in-out;
   background-color: $white;
 
+  @include respond(laptop) {
+    width: 40rem;
+    padding: 4rem;
+  }
+
   &__price,
   &__name,
   &__description {
@@ -17,10 +22,18 @@
     font-size: 8rem;
     color: rgba(0, 0, 0, 0.85);
     margin-bottom: 2rem;
+
+    @include respond(laptop) {
+      font-size: 6.5rem;
+    }
   }
 
   &__name {
     color: $color-secondary-dark;
+
+    @include respond(laptop) {
+      font-size: 3.5rem;
+    }
   }
 
   &__description {
@@ -30,6 +43,10 @@
     letter-spacing: 1px;
     font-weight: 700;
     text-align: center;
+
+    @include respond(laptop) {
+      font-size: 2rem;
+    }
   }
 
   &__features {

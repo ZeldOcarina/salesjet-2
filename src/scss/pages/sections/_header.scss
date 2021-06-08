@@ -30,6 +30,10 @@
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+
+    @include respond(big-tv) {
+      width: 70%;
+    }
   }
 
   &__right-container {
