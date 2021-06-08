@@ -1,0 +1,16 @@
+.home-testimonials {
+  margin: 10rem auto;
+
+  &__cards-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 4rem;
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .home-features__bottom-cta-container {
+    margin: 10rem 0;
+  }
+}

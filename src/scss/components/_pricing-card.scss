@@ -1,0 +1,71 @@
+.pricing-card {
+  box-shadow: 5px 5px 15px 0 rgba(0, 0, 0, 0.06);
+  padding: 6rem;
+  width: 47rem;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease-in-out;
+  background-color: $white;
+
+  &__price,
+  &__name,
+  &__description {
+    text-align: center;
+  }
+
+  &__price {
+    font-size: 8rem;
+    color: rgba(0, 0, 0, 0.85);
+    margin-bottom: 2rem;
+  }
+
+  &__name {
+    color: $color-secondary-dark;
+  }
+
+  &__description {
+    display: block;
+    color: rgba(0, 0, 0, 0.6);
+    font-family: $body-alt;
+    letter-spacing: 1px;
+    font-weight: 700;
+    text-align: center;
+  }
+
+  &__features {
+    list-style: none;
+    margin: 4rem 0;
+  }
+
+  &__feature {
+    display: flex;
+
+    &:not(:last-child) {
+      margin-bottom: 0.5rem;
+    }
+
+    &__text {
+      font-size: 2rem;
+    }
+  }
+
+  &__svg {
+    width: 3rem;
+    margin-right: 1rem;
+  }
+
+  &__btn {
+    max-width: 100%;
+    width: 100%;
+    text-align: center;
+    font-size: 1.8rem;
+    padding: 2rem 3rem;
+    margin-top: auto;
+    display: block;
+  }
+
+  &:hover {
+    transform: translateY(-2rem);
+    box-shadow: 8px 8px 20px 0 rgba(0, 0, 0, 0.18);
+  }
+}

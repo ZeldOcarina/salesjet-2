@@ -1,0 +1,77 @@
+.testimonial-card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  width: 47rem;
+  height: auto;
+  background-color: $white;
+  transition: all 0.3s ease-in-out;
+
+  @include respond(phone-land) {
+    height: max-content;
+    padding-bottom: 2rem;
+  }
+
+  @include respond(phone) {
+    width: 85%;
+    margin: 0 auto;
+  }
+
+  &__image-container {
+    position: relative;
+  }
+
+  &__play {
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+    width: 15%;
+    transition: all 0.2s ease;
+
+    &:hover {
+      filter: brightness(75%);
+      cursor: pointer;
+    }
+  }
+
+  &__name {
+    font-weight: 700;
+    color: $color-secondary-dark;
+    font-size: 2rem;
+    font-family: $body-alt;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-top: 5rem;
+
+    @include respond(tab-land) {
+      padding: 1rem;
+    }
+  }
+
+  &__hat {
+    font-size: 2rem;
+    margin-top: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0;
+  }
+
+  &__img {
+    width: 100%;
+  }
+
+  &__text-container {
+    padding: 5rem;
+
+    @include respond(tab-land) {
+      padding: 0 3rem;
+    }
+  }
+
+  &__description {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  &:hover {
+    transform: translateY(-2rem);
+    box-shadow: 8px 8px 20px 0 rgba(0, 0, 0, 0.18);
+  }
+}

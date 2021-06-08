@@ -1,0 +1,17 @@
+.home-pricing {
+  padding: 6rem 0;
+  background-color: #f6f6f6;
+
+  &__container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 4rem;
+    width: 90%;
+    margin: 10rem auto;
+  }
+
+  .home-features__text {
+    margin-bottom: 2rem;
+  }
+}

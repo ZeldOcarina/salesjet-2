@@ -1,0 +1,29 @@
+.footer {
+  background-color: $color-secondary;
+
+  &__container {
+    margin-left: 15%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo-container {
+    margin-right: 5rem;
+  }
+
+  &__left-side {
+    display: flex;
+  }
+
+  &__menu {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+  }
+
+  &__item {
+    font-size: 2rem;
+  }
+}
