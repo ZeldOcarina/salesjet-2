@@ -9,16 +9,16 @@ html {
   font-size: 10px;
 
   @include respond(big-desktop) {
-    font-size: 15px;
+    font-size: 10px;
   }
   @include respond(macbook) {
-    font-size: 16px;
+    font-size: 15px;
   }
   @include respond(big-tv) {
-    font-size: 20px;
+    font-size: 18px;
   }
   @include respond(short-laptop) {
-    font-size: 9px;
+    font-size: 8px;
   }
 }
 
