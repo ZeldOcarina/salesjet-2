@@ -44,5 +44,9 @@
     letter-spacing: 0;
     display: block;
     grid-column: 1 / 4;
+
+    @include respond(short-laptop) {
+      font-size: 2rem;
+    }
   }
 }

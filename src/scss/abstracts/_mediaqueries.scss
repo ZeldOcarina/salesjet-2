@@ -56,9 +56,9 @@ ORDER: Base + typography > General layout + grid > page layout > components
   }
 
   @if $breakpoint == short-laptop {
-    @media only screen and (max-height: 50em) {
+    @media only screen and (max-height: 53.12em) {
       @content;
-    } // 800px
+    } // 850px
   }
 
   @if $breakpoint == big-desktop {

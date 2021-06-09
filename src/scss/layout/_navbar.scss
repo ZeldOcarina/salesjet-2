@@ -17,6 +17,9 @@
     @include respond(big-tv) {
       width: 40rem;
     }
+    @include respond(short-laptop) {
+      width: 25rem;
+    }
   }
 
   &__items {
