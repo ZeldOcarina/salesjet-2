@@ -68,9 +68,9 @@ ORDER: Base + typography > General layout + grid > page layout > components
   }
 
   @if $breakpoint == macbook {
-    @media only screen and (min-width: 156.25em) {
+    @media only screen and (min-width: 150em) {
       @content;
-    } // 2500px
+    } // 2400px
   }
 
   @if $breakpoint == big-tv {
