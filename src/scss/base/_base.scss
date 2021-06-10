@@ -12,10 +12,10 @@ html {
     font-size: 10px;
   }
   @include respond(macbook) {
-    font-size: 15px;
+    font-size: 12px;
   }
   @include respond(big-tv) {
-    font-size: 18px;
+    font-size: 12px;
   }
   @include respond(short-laptop) {
     font-size: 8px;

@@ -1,6 +1,7 @@
 @mixin container($margin-top, $margin-bottom) {
   width: $section-width;
   margin: #{$margin-top} auto #{$margin-bottom};
+  max-width: 1280px;
 
   @include respond(laptop) {
     width: 80%;
