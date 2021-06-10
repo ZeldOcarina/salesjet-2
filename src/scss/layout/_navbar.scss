@@ -4,10 +4,12 @@
   justify-content: space-between;
   width: 100%;
   z-index: 3;
+  align-items: center;
+  @include container(3rem, 0);
+  left: 50%;
+  transform: translateX(-50%);
 
   &__right-container {
-    margin-right: 15%;
-    margin-top: 7rem;
   }
 
   &__image {
@@ -16,9 +18,6 @@
     }
     @include respond(big-tv) {
       width: 40rem;
-    }
-    @include respond(short-laptop) {
-      width: 25rem;
     }
   }
 
