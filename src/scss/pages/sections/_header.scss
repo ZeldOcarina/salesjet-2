@@ -43,8 +43,10 @@
   }
 
   &__right-container {
-    position: relative;
+    position: static;
     z-index: 2;
+    width: 120%;
+    height: auto;
 
     @include respond(short-laptop) {
       width: 180rem;
