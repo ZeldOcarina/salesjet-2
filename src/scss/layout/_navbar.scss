@@ -50,4 +50,12 @@
       opacity: 1;
     }
   }
+
+  &__select {
+    padding: 0.5rem;
+    background-color: $color-secondary;
+    border: none;
+    outline: none;
+    font-size: 1.5rem;
+  }
 }
