@@ -1,0 +1,111 @@
+.slider {
+  max-width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  position: relative;
+
+  /* IN THE END */
+  overflow: hidden;
+
+  &__btn {
+    position: absolute;
+    bottom: 5rem;
+    z-index: 10;
+    border: none;
+    background-color: $white;
+    font-family: inherit;
+    color: #333;
+    border-radius: 50%;
+    height: 5.5rem;
+    width: 5.5rem;
+    font-size: 3.25rem;
+    cursor: pointer;
+
+    &__arrow {
+      width: 50%;
+    }
+
+    &--left {
+      left: 2rem;
+      //transform: translate(-50%, -50%);
+    }
+
+    &--right {
+      right: 2rem;
+      //transform: translate(50%, -50%);
+    }
+  }
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  /* THIS creates the animation! */
+  transition: transform 1s;
+
+  &__container {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  &__header {
+    font-family: $title-font;
+    margin-bottom: 2rem;
+  }
+
+  & > img {
+    /* Only for images that have different size than slide */
+    width: 100%;
+    height: auto;
+  }
+
+  &__text {
+    width: 80%;
+    margin: 4rem auto 0 auto;
+    display: block;
+    text-align: center;
+    font-size: 2.2rem;
+  }
+}
+
+.dots {
+  position: absolute;
+  bottom: 2%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+
+  &__dot {
+    /* Only necessary when overlying images */
+    /* box-shadow: 0 0.6rem 1.5rem rgba(0, 0, 0, 0.7); */
+    border: none;
+    background-color: #b9b9b9;
+    opacity: 0.7;
+    height: 1rem;
+    width: 1rem;
+    border-radius: 50%;
+    margin-right: 1.75rem;
+    cursor: pointer;
+    transition: all 0.5s;
+
+    &:last-child {
+      margin: 0;
+    }
+
+    &--active {
+      /* background-color: #fff; */
+      background-color: #3b3b3b;
+      opacity: 1;
+    }
+  }
+}

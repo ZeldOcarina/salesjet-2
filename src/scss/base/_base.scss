@@ -74,6 +74,10 @@ a {
   font-weight: 700;
   color: $white;
   text-decoration: none;
+
+  &:hover {
+    color: $white;
+  }
 }
 
 hr {

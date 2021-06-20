@@ -1,0 +1,11 @@
+.home-carousel {
+  background-color: #f6f6f6;
+  height: 95vh;
+  display: flex;
+  align-items: center;
+  padding-bottom: 5rem;
+  &__container {
+    @include container(6rem, 0);
+    height: 85vh;
+  }
+}
