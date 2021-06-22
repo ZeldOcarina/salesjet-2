@@ -8,4 +8,7 @@ export const iframePlaceholder = document.querySelector(
   ".video-player__iframe"
 );
 export const closeIcon = document.querySelector(".video-player__close-icon");
-export const openBtns = [document.querySelector(".thumbnail__play-icon")];
+export const openBtns = [
+  document.querySelector(".thumbnail__play-icon"),
+  ...document.querySelectorAll(".testimonial-card__play"),
+];
