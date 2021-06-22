@@ -25,7 +25,7 @@ export default class VideoPlayer {
 
   closePlayer() {
     this.videoPlayer.classList.add("d-none");
-    this.currentPlayer.stopVideo();
+    this.currentPlayer.pause();
   }
 
   handleReady() {
@@ -33,24 +33,6 @@ export default class VideoPlayer {
   }
 
   execute() {
-    // window.YT.ready(() => {
-    //   this.player = new window.YT.Player("video-player__iframe", {
-    //     height: "360",
-    //     width: "640",
-    //     videoId: "4QaW9_7gzuQ",
-    //     suggestedQuality: "hd1080",
-    //     events: {
-    //       //onReady: () => {
-    //       //  console.log("Ready is called");
-    //       //},
-    //       //onStateChange: onPlayerStateChange,
-    //     },
-    //     playerVars: {
-    //       origin: window.location.href,
-    //     },
-    //   });
-    // });
-
     const options01 = {
       id: 424152266,
       width: "100%",
