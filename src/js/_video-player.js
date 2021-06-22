@@ -25,7 +25,7 @@ export default class VideoPlayer {
 
   closePlayer() {
     this.videoPlayer.classList.add("d-none");
-    this.player.stopVideo();
+    this.currentPlayer.stopVideo();
   }
 
   handleReady() {
@@ -51,16 +51,14 @@ export default class VideoPlayer {
     //   });
     // });
 
-    var options01 = {
+    const options01 = {
       id: 424152266,
       width: "100%",
     };
 
-    var video01Player = new Player("salesjet_features", options01);
+    this.currentPlayer = new Player("salesjet_features", options01);
 
-    video01Player.setVolume(0);
-
-    video01Player.on("play", function () {
+    this.currentPlayer.on("play", function () {
       console.log("Played the first video");
     });
   }
