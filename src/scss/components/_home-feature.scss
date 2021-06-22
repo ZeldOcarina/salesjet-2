@@ -20,6 +20,7 @@
 
   &__image {
     width: 70%;
+    border-radius: 20px;
 
     &--reverse {
     }
@@ -46,6 +47,7 @@
     font-family: $body-alt;
     letter-spacing: 1px;
     font-size: 2.2rem;
+    text-transform: uppercase;
   }
 
   &__title {
@@ -54,6 +56,6 @@
   }
 
   &__paragraph {
-    font-size: 2.3rem;
+    font-size: 1.8rem;
   }
 }
