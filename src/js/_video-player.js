@@ -43,5 +43,9 @@ export default class VideoPlayer {
     this.currentPlayer.on("play", function () {
       console.log("Played the first video");
     });
+
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") return this.currentPlayer.pause();
+    });
   }
 }
