@@ -24,7 +24,6 @@ export default class VideoPlayer {
 
     document.addEventListener("keydown", (e) => {
       if (!e.key === "Escape") return;
-      this.currentPlayer.pause();
       this.closePlayer();
     });
 

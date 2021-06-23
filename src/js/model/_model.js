@@ -12,3 +12,5 @@ export const openBtns = [
   document.querySelector(".thumbnail__play-icon"),
   ...document.querySelectorAll(".testimonial-card__play"),
 ];
+
+export const navLinks = document.querySelectorAll(".navbar__link");

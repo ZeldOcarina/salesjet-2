@@ -60,4 +60,13 @@
     left: 0;
     z-index: 1;
   }
+
+  &__btn {
+    &--subtitle {
+      text-align: center;
+      display: block;
+      font-weight: 100;
+      font-size: 1.6rem;
+    }
+  }
 }
