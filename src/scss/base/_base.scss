@@ -30,6 +30,7 @@ body {
   letter-spacing: 2px;
   line-height: 1.5;
   background-color: $white;
+  overflow-x: hidden;
 
   @include respond(phone-land) {
     font-size: $mobile-font-size;
@@ -38,6 +39,10 @@ body {
 
 h1 {
   font-size: $big-title;
+
+  @include respond(tab-land) {
+    font-size: 3.5rem;
+  }
 }
 
 h1,
@@ -60,6 +65,10 @@ h4,
 h5,
 h6 {
   font-size: $title-font-size;
+
+  @include respond(tab-land) {
+    font-size: 2.8rem;
+  }
 }
 
 p {

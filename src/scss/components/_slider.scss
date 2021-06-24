@@ -21,18 +21,54 @@
     font-size: 3.25rem;
     cursor: pointer;
 
+    @include respond(phone-land) {
+      height: 68%;
+      border-radius: 0;
+      width: 3rem;
+    }
+
     &__arrow {
       width: 50%;
     }
 
+    &--standard {
+      @include respond(phone-land) {
+        display: none;
+      }
+    }
+
     &--left {
       left: 2rem;
-      //transform: translate(-50%, -50%);
+
+      @include respond(phone-land) {
+        left: 0;
+      }
     }
 
     &--right {
       right: 2rem;
       //transform: translate(50%, -50%);
+
+      @include respond(phone-land) {
+        right: 0;
+      }
+    }
+  }
+
+  &__swipe-icon {
+    display: none;
+
+    @include respond(tab-port) {
+      display: block;
+      position: absolute;
+      top: 13rem;
+      right: 5rem;
+    }
+    @include respond(phone-land) {
+      display: block;
+      position: absolute;
+      top: 5rem;
+      right: 5rem;
     }
   }
 }
@@ -61,12 +97,23 @@
   &__header {
     font-family: $title-font;
     margin-bottom: 2rem;
+
+    @include respond(tab-port) {
+      text-align: center;
+    }
+    @include respond(phone-land) {
+      margin-bottom: 1rem;
+    }
   }
 
   & > img {
     /* Only for images that have different size than slide */
     width: 100%;
     height: auto;
+
+    @include respond(phone-land) {
+      width: calc(100% - 6rem);
+    }
   }
 
   &__text {
@@ -74,6 +121,10 @@
     margin: 4rem auto 0 auto;
     display: block;
     text-align: center;
+
+    @include respond(phone-land) {
+      margin: 2rem auto 0 auto;
+    }
   }
 }
 
@@ -83,6 +134,10 @@
   left: 50%;
   transform: translateX(-50%);
   display: flex;
+
+  @include respond(phone-land) {
+    display: none;
+  }
 
   &__dot {
     /* Only necessary when overlying images */

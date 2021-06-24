@@ -4,8 +4,19 @@
   justify-content: center;
   gap: 5rem;
 
+  @include respond(tab-land) {
+    gap: 2rem;
+  }
+  @include respond(tab-port) {
+    flex-direction: column;
+  }
+
   &--reverse {
     flex-direction: row-reverse;
+
+    @include respond(tab-port) {
+      flex-direction: column;
+    }
   }
 
   &__images-container {
@@ -13,8 +24,23 @@
     height: 30rem;
     position: relative;
 
+    @include respond(tab-land) {
+      width: 40rem;
+    }
+
+    @include respond(tab-port) {
+      width: 100%;
+      margin-bottom: 6rem;
+      display: flex;
+      justify-content: center;
+    }
+
     &--reverse {
       margin-left: 10rem;
+
+      @include respond(tab-port) {
+        margin-left: 0;
+      }
     }
   }
 
@@ -32,14 +58,34 @@
     right: 10rem;
     height: 70%;
 
+    @include respond(tab-land) {
+      right: 2rem;
+      width: 25rem;
+      bottom: 3rem;
+    }
+    @include respond(tab-port) {
+      right: 2rem;
+      width: 35rem;
+      bottom: -4rem;
+    }
+
     &--reverse {
       left: -10rem;
       right: 0;
+
+      @include respond(tab-port) {
+        right: 0;
+        left: initial;
+      }
     }
   }
 
   &__right-container {
     width: 48%;
+
+    @include respond(tab-port) {
+      width: 100%;
+    }
   }
 
   &__pretitle {
@@ -48,6 +94,10 @@
     letter-spacing: 1px;
     font-size: 2.2rem;
     text-transform: uppercase;
+
+    @include respond(tab-land) {
+      font-size: 1.8rem;
+    }
   }
 
   &__title {

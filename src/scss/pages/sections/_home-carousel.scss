@@ -4,8 +4,24 @@
   display: flex;
   align-items: center;
   padding-bottom: 5rem;
+
+  @include respond(tab-port) {
+    height: 70vh;
+  }
+  @include respond(phone-land) {
+    height: 120vh;
+  }
+
   &__container {
     @include container(6rem, 0);
     height: 85vh;
+
+    @include respond(tab-port) {
+      height: 70vh;
+    }
+    @include respond(phone-land) {
+      height: 120vh;
+      width: 100%;
+    }
   }
 }

@@ -6,15 +6,36 @@
   gap: 4rem;
   padding: 6rem 5%;
 
+  @include respond(tab-port) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-bottom: 0;
+  }
+
   &__text {
     font-size: 2.2rem;
     font-weight: 500;
+
+    @include respond(tab-land) {
+      font-size: 1.8rem;
+    }
+    @include respond(tab-port) {
+      font-size: 1.8rem;
+      text-align: center;
+    }
   }
 
   &__section {
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    @include respond(tab-port) {
+      width: 35%;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
   }
 
   &__icon {

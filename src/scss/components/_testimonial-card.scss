@@ -5,9 +5,12 @@
   background-color: $white;
   transition: all 0.3s ease-in-out;
 
+  @include respond(tab-land) {
+    padding-bottom: 4rem;
+  }
+
   @include respond(phone-land) {
     height: max-content;
-    padding-bottom: 2rem;
   }
 
   @include respond(phone) {
@@ -17,6 +20,7 @@
 
   &__image-container {
     position: relative;
+    margin-bottom: 2rem;
   }
 
   &__play {
@@ -42,7 +46,7 @@
     margin-top: 5rem;
 
     @include respond(tab-land) {
-      padding: 1rem;
+      padding: 0;
     }
   }
 

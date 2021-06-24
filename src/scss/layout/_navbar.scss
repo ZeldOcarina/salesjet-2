@@ -9,6 +9,10 @@
   left: 50%;
   transform: translateX(-50%);
 
+  @include respond(tab-land) {
+    display: none;
+  }
+
   &__right-container {
   }
 
@@ -19,6 +23,9 @@
     @include respond(big-tv) {
       width: 40rem;
     }
+    @include respond(tab-land) {
+      width: 20rem;
+    }
   }
 
   &__items {
@@ -27,6 +34,10 @@
     list-style: none;
     gap: 3rem;
     font-size: 2rem;
+
+    @include respond(tab-land) {
+      gap: 1.5rem;
+    }
   }
 
   &__item {
@@ -35,6 +46,10 @@
   &__link {
     font-weight: 200;
     transition: opacity 0.2s ease-in-out;
+
+    @include respond(tab-land) {
+      font-size: 1.7rem;
+    }
 
     &:hover {
       opacity: 0.5;
@@ -58,5 +73,102 @@
     outline: none;
     font-size: 1.5rem;
     color: $white;
+  }
+}
+
+.mobile-navbar {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 50;
+  background-color: $color-secondary-dark;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  display: none;
+  transform: translateY(-100vh);
+  transition: all 0.5s ease-in-out;
+
+  @include respond(tab-land) {
+    display: flex;
+  }
+
+  &__close {
+    position: absolute;
+    top: 8rem;
+    right: 8rem;
+    width: 3rem;
+    transition: all 0.2s ease-in-out;
+    height: min-content;
+    margin: auto 0;
+
+    @include respond(phone-land) {
+      top: 5rem;
+      right: 6rem;
+    }
+
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.2);
+    }
+  }
+
+  .navbar {
+    &__items {
+      flex-direction: column;
+    }
+
+    &__link,
+    &__select {
+      font-size: 2.5rem;
+
+      @include respond(phone-land) {
+        font-size: 2rem;
+      }
+    }
+
+    &__link {
+      @include respond(phone-land) {
+        padding: 2rem 4rem;
+      }
+    }
+
+    &__item {
+      @include respond(phone-land) {
+        margin: 0 !important;
+      }
+    }
+  }
+}
+
+.mini-navbar {
+  display: none;
+  justify-content: space-between;
+  width: 80%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) translateY(3rem);
+
+  @include respond(tab-port) {
+    display: flex;
+  }
+
+  &__select {
+    font-size: 2rem;
+  }
+
+  &__hamburger {
+    width: 4rem;
+    transition: all 0.2s ease-in-out;
+    height: min-content;
+    margin: auto 0;
+
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.2);
+    }
   }
 }

@@ -13,10 +13,20 @@ import {
   closeIcon,
   openBtns,
   navLinks,
+  mobileNavbar,
+  navbarItems,
+  closeNavbarIcon,
+  hamburger,
 } from "./model/_model.js";
 
 export function init() {
-  new Animations(navLinks);
+  new Animations(
+    navLinks,
+    mobileNavbar,
+    navbarItems,
+    hamburger,
+    closeNavbarIcon
+  );
   new LinkHandler();
   new Select(select);
   new Slider(slider, slides);

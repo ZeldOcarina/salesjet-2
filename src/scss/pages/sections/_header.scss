@@ -5,6 +5,10 @@
   color: $white;
   height: 100vh;
 
+  @include respond(phone-land) {
+    height: auto;
+  }
+
   &__container {
     @include container(0, 0);
     display: flex;
@@ -17,10 +21,23 @@
       transform: translateY(5rem);
       z-index: 20;
     }
+    @include respond(tab-port) {
+      flex-direction: column-reverse;
+      max-width: $section-width;
+      text-align: center;
+    }
+    @include respond(phone-land) {
+      padding: 10rem 0 10rem 0;
+    }
   }
 
   &__title {
     margin-bottom: 2rem;
+
+    @include respond(tab-port) {
+      text-align: center;
+      margin-top: 4rem;
+    }
   }
 
   &__text {
@@ -40,6 +57,9 @@
     @include respond(big-tv) {
       width: 70%;
     }
+    @include respond(tab-port) {
+      margin-right: 0;
+    }
   }
 
   &__right-container {
@@ -47,6 +67,24 @@
     z-index: 2;
     width: 120%;
     height: auto;
+    background-color: red;
+    display: block;
+
+    @include respond(tab-port) {
+      display: none;
+      max-width: 100%;
+      margin-bottom: 6rem;
+    }
+
+    &--top {
+      display: none;
+
+      @include respond(tab-port) {
+        display: block;
+        width: 80%;
+        margin: 0 auto 6rem auto;
+      }
+    }
 
     @include respond(short-laptop) {
       width: 180rem;
@@ -62,6 +100,9 @@
   }
 
   &__btn {
+    @include respond(tab-port) {
+      margin: 0 auto;
+    }
     &--subtitle {
       text-align: center;
       display: block;

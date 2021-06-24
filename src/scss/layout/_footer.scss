@@ -17,10 +17,18 @@
 
   &__logo-container {
     margin-right: 5rem;
+
+    @include respond(tab-port) {
+      margin-right: 5rem;
+    }
   }
 
   &__left-side {
     display: flex;
+
+    @include respond(tab-port) {
+      align-items: center;
+    }
   }
 
   &__menu {
@@ -28,6 +36,13 @@
     display: flex;
     align-items: center;
     gap: 3rem;
+
+    @include respond(tab-port) {
+      flex-direction: column;
+      text-align: left;
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
   }
 
   &__item {

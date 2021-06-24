@@ -6,8 +6,24 @@ export default class Slider {
     this.btnRight = slider.querySelector(".slider__btn--right");
     this.dotContainer = slider.querySelector(".dots");
     this.currentSlide = 0;
+    this.touchstartX = 0;
+    this.touchendX = 0;
     this.maxSlide = slides.length;
     this.setupSlider();
+
+    this.slider.addEventListener("touchstart", (e) => {
+      this.touchstartX = e.changedTouches[0].screenX;
+    });
+
+    this.slider.addEventListener("touchend", (e) => {
+      this.touchendX = e.changedTouches[0].screenX;
+      this.handleGesture();
+    });
+  }
+
+  handleGesture() {
+    if (this.touchendX < this.touchstartX) return this.nextSlide();
+    if (this.touchendX > this.touchstartX) return this.prevSlide();
   }
 
   setupSlider() {

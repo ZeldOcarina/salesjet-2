@@ -1,7 +1,16 @@
 export default class Animations {
-  constructor(navLinks) {
+  constructor(navLinks, mobileNavbar, navbarItems, hamburger, closeNavbarIcon) {
+    this.hamburger = hamburger;
+    this.mobileNavbar = mobileNavbar;
+    this.navbarItems = navbarItems;
     this.navLinks = navLinks;
+    this.closeNavbarIcon = closeNavbarIcon;
     this.navSmoothScrolling();
+    this.mobileNavbar;
+
+    this.hamburger.addEventListener("click", this.activateNavbar.bind(this));
+    this.closeNavbarIcon.addEventListener("click", this.closeNavbar.bind(this));
+    this.navbarItems.addEventListener("click", this.handleNavClick.bind(this));
   }
 
   navSmoothScrolling() {
@@ -14,5 +23,23 @@ export default class Animations {
         document.querySelector(id).scrollIntoView({ behavior: "smooth" });
       });
     });
+  }
+
+  activateNavbar(e) {
+    this.mobileNavbar.style.transform = "translateY(0)";
+  }
+
+  closeNavbar(e) {
+    this.mobileNavbar.style.transform = "translateY(-100vh)";
+  }
+
+  handleNavClick(e) {
+    if (!e.target.classList.contains("navbar__link")) return;
+    e.preventDefault();
+    this.closeNavbar();
+
+    setTimeout(() => {
+      document.querySelector(id).scrollIntoView({ behavior: "smooth" });
+    }, 600);
   }
 }
