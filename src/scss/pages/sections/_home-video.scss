@@ -38,6 +38,7 @@
     margin-bottom: 4rem;
 
     &--mobile {
+      display: none;
       @include respond(tab-port) {
         display: block !important;
         text-align: center;

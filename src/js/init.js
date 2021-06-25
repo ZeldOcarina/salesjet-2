@@ -3,6 +3,7 @@ import LinkHandler from "./_link-handler.js";
 import Select from "./_select.js";
 import Slider from "./_slider.js";
 import VideoPlayer from "./_video-player.js";
+import DateHelper from "./_date-helper.js";
 
 import {
   select,
@@ -31,6 +32,7 @@ export function init() {
   new Select(select);
   new Slider(slider, slides);
   new VideoPlayer(videoPlayer, iframePlaceholder, closeIcon, openBtns);
+  new DateHelper();
 
   console.log("App correctly initiated");
 }

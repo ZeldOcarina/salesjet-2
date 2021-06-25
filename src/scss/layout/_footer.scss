@@ -5,8 +5,14 @@
   &__container {
     margin: 0 auto;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
     align-items: center;
+    width: $section-width;
+
+    @include respond(phone-port) {
+      flex-direction: column;
+    }
   }
 
   &__logo {
@@ -18,8 +24,8 @@
   &__logo-container {
     margin-right: 5rem;
 
-    @include respond(tab-port) {
-      margin-right: 5rem;
+    @include respond(phone-port) {
+      margin-right: 0;
     }
   }
 
@@ -28,6 +34,9 @@
 
     @include respond(tab-port) {
       align-items: center;
+    }
+    @include respond(phone-port) {
+      flex-direction: column;
     }
   }
 
@@ -43,6 +52,9 @@
       justify-content: flex-start;
       align-items: flex-start;
     }
+    @include respond(phone-port) {
+      align-items: center;
+    }
   }
 
   &__item {
@@ -55,6 +67,14 @@
     }
     @include respond(short-laptop) {
       width: 20rem;
+    }
+  }
+
+  &__copy {
+    color: $white;
+    margin-left: 4rem;
+    @include respond(laptop) {
+      margin-top: 4rem;
     }
   }
 }

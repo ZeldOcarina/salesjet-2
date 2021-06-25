@@ -21,12 +21,6 @@
     font-size: 3.25rem;
     cursor: pointer;
 
-    @include respond(phone-land) {
-      height: 68%;
-      border-radius: 0;
-      width: 3rem;
-    }
-
     &__arrow {
       width: 50%;
     }
@@ -43,6 +37,26 @@
       @include respond(phone-land) {
         left: 0;
       }
+
+      &--mobile {
+        left: 0;
+      }
+    }
+
+    &--left--mobile,
+    &--right--mobile {
+      display: none;
+
+      @include respond(phone-land) {
+        display: block !important;
+        position: absolute;
+        bottom: 20%;
+        height: 68%;
+        border-radius: 0;
+        width: 3rem;
+        border: none;
+        background-color: #f6f6f6;
+      }
     }
 
     &--right {
@@ -51,6 +65,14 @@
 
       @include respond(phone-land) {
         right: 0;
+      }
+
+      &--mobile {
+        display: none;
+
+        @include respond(phone-land) {
+          right: 0;
+        }
       }
     }
   }
@@ -103,6 +125,10 @@
     }
     @include respond(phone-land) {
       margin-bottom: 1rem;
+    }
+    @include respond(phone-port) {
+      width: calc(100% - 6rem);
+      font-size: 2.5rem;
     }
   }
 

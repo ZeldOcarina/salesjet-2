@@ -8,6 +8,9 @@
   @include respond(phone-land) {
     height: auto;
   }
+  @include respond(phone-port) {
+    height: 100vh;
+  }
 
   &__container {
     @include container(0, 0);
@@ -36,6 +39,10 @@
 
     @include respond(tab-port) {
       text-align: center;
+      margin-top: 4rem;
+    }
+    @include respond(phone-port) {
+      font-size: 2.5rem;
       margin-top: 4rem;
     }
   }
@@ -67,7 +74,6 @@
     z-index: 2;
     width: 120%;
     height: auto;
-    background-color: red;
     display: block;
 
     @include respond(tab-port) {
@@ -83,6 +89,9 @@
         display: block;
         width: 80%;
         margin: 0 auto 6rem auto;
+      }
+      @include respond(phone-port) {
+        width: 100%;
       }
     }
 

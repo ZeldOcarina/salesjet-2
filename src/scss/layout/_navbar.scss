@@ -26,6 +26,9 @@
     @include respond(tab-land) {
       width: 20rem;
     }
+    @include respond(phone-port) {
+      width: 15rem;
+    }
   }
 
   &__items {

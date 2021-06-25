@@ -11,6 +11,9 @@
   @include respond(phone-land) {
     height: 120vh;
   }
+  @include respond(phone-port) {
+    height: 65vh;
+  }
 
   &__container {
     @include container(6rem, 0);
@@ -21,6 +24,10 @@
     }
     @include respond(phone-land) {
       height: 120vh;
+      width: 100%;
+    }
+    @include respond(phone-port) {
+      height: 65vh;
       width: 100%;
     }
   }
