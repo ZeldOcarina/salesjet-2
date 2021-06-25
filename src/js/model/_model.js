@@ -19,3 +19,7 @@ export const navbarItems = document.querySelector(".navbar__items");
 
 export const hamburger = document.querySelector(".mini-navbar__hamburger");
 export const closeNavbarIcon = document.querySelector(".mobile-navbar__close");
+
+export const testimonialsContainer = document.querySelector(
+  ".home-testimonials__cards-container"
+);

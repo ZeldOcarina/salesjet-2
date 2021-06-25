@@ -4,6 +4,7 @@
   height: auto;
   background-color: $white;
   transition: all 0.3s ease-in-out;
+  position: relative;
 
   @include respond(tab-land) {
     padding-bottom: 4rem;
@@ -77,5 +78,16 @@
   &:hover {
     transform: translateY(-2rem);
     box-shadow: 8px 8px 20px 0 rgba(0, 0, 0, 0.18);
+  }
+
+  &__flag {
+    border-radius: 50%;
+    width: 4rem;
+    height: 4rem;
+    position: absolute;
+    left: 2rem;
+    top: 2rem;
+    object-fit: cover;
+    object-position: center;
   }
 }

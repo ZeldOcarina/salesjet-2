@@ -7,10 +7,22 @@ export default class VideoPlayer {
     this.closeIcon = closeIcon;
     this.openBtns = openBtns;
     this.init();
+    this.listenForTestimonialsCards();
   }
 
-  init() {
+  async init() {
     this.closeIcon.addEventListener("click", this.closePlayer.bind(this));
+
+    const promise = new Promise((resolve, reject) => {
+      document.addEventListener("TestimonialsCardsCreated", (e) => {
+        const playIcons = document.querySelectorAll(".testimonial-card__play");
+        this.openBtns = [...this.openBtns, ...playIcons];
+        resolve(this.openBtns);
+      });
+    });
+
+    await promise;
+
     this.openBtns.forEach((btn) => {
       btn?.addEventListener("click", this.openPlayer.bind(this));
     });
@@ -36,4 +48,6 @@ export default class VideoPlayer {
     await this.currentPlayer.destroy();
     this.currentPlayer = null;
   }
+
+  listenForTestimonialsCards() {}
 }
