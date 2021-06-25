@@ -13,6 +13,9 @@
     @include respond(phone-port) {
       flex-direction: column;
     }
+    @include respond(iphone-5) {
+      width: 90%;
+    }
   }
 
   &__logo {
@@ -54,6 +57,7 @@
     }
     @include respond(phone-port) {
       align-items: center;
+      text-align: center;
     }
   }
 
@@ -73,8 +77,12 @@
   &__copy {
     color: $white;
     margin-left: 4rem;
+    text-align: center;
     @include respond(laptop) {
       margin-top: 4rem;
+    }
+    @include respond(phone-port) {
+      margin-left: 0;
     }
   }
 }

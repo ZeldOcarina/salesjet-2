@@ -83,6 +83,11 @@
       width: 23rem;
       bottom: 0;
     }
+    @include respond(iphone-5) {
+      right: 0;
+      width: 18rem;
+      bottom: 0;
+    }
 
     &--reverse {
       left: -10rem;

@@ -11,6 +11,9 @@
   @include respond(phone-port) {
     height: 100vh;
   }
+  @include respond(iphone-5) {
+    height: auto;
+  }
 
   &__container {
     @include container(0, 0);

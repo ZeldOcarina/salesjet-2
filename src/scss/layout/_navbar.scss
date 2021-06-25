@@ -155,8 +155,14 @@
   left: 50%;
   transform: translateX(-50%) translateY(3rem);
 
-  @include respond(tab-port) {
+  @include respond(tab-land) {
     display: flex;
+    align-items: center;
+    height: 5rem;
+    width: 80%;
+  }
+  @include respond(phone-port) {
+    width: 90%;
   }
 
   &__select {
@@ -167,7 +173,7 @@
     width: 4rem;
     transition: all 0.2s ease-in-out;
     height: min-content;
-    margin: auto 0;
+    margin: 0;
 
     &:hover {
       cursor: pointer;
