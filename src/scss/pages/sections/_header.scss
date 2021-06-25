@@ -52,6 +52,10 @@
 
   &__text {
     margin-bottom: 5rem;
+
+    @include respond(phone-port) {
+      margin-bottom: 3rem;
+    }
   }
 
   &__left-container {
@@ -91,10 +95,11 @@
       @include respond(tab-port) {
         display: block;
         width: 80%;
-        margin: 0 auto 6rem auto;
+        margin: 4rem auto 6rem auto;
       }
       @include respond(phone-port) {
         width: 100%;
+        margin: 1rem auto 3rem auto;
       }
     }
 
