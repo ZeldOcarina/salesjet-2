@@ -9,6 +9,9 @@
   left: 50%;
   transform: translateX(-50%);
 
+  @include respond(onethousandthreehundreds) {
+    width: 90%;
+  }
   @include respond(tab-land) {
     display: none;
   }
@@ -35,8 +38,12 @@
     display: flex;
     align-items: center;
     list-style: none;
-    gap: 3rem;
-    font-size: 2rem;
+    gap: 2rem;
+    font-size: 1.8rem;
+
+    @include respond(small-laptop) {
+      font-size: 1.5rem;
+    }
 
     @include respond(tab-land) {
       gap: 1.5rem;

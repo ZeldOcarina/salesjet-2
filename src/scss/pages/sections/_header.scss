@@ -40,6 +40,9 @@
   &__title {
     margin-bottom: 2rem;
 
+    @include respond(small-laptop) {
+      font-size: 3.6rem;
+    }
     @include respond(tab-port) {
       text-align: center;
       margin-top: 4rem;

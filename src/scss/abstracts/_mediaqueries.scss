@@ -49,6 +49,18 @@ ORDER: Base + typography > General layout + grid > page layout > components
     } // 1635px
   }
 
+  @if $breakpoint == small-laptop {
+    @media only screen and (max-width: 87.5em) {
+      @content;
+    } // 1400px
+  }
+
+  @if $breakpoint == onethousandthreehundreds {
+    @media only screen and (max-width: 81.25em) {
+      @content;
+    } // 1300px
+  }
+
   @if $breakpoint == big-laptop {
     @media only screen and (max-width: 115em) {
       @content;

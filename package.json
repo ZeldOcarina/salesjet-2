@@ -5,7 +5,9 @@
   "main": "public/index.html",
   "scripts": {
     "start": "parcel src/index.html",
-    "build": "parcel build src/index.html --dist-dir public"
+    "build": "parcel build src/index.html --dist-dir public",
+    "build-italian": "parcel build src/italian-index.html --dist-dir public",
+    "build-spanish": "parcel build src/spanish-index.html --dist-dir public"
   },
   "keywords": [],
   "author": "",

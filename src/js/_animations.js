@@ -19,6 +19,7 @@ export default class Animations {
         e.preventDefault();
         const id = e.target.getAttribute("href");
         if (id === "https://kb.salesjet.io/en") return location.assign(id);
+        if (id === "https://cabin.salesjet.io") return location.assign(id);
 
         document.querySelector(id).scrollIntoView({ behavior: "smooth" });
       });
