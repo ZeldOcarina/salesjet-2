@@ -8,5 +8,6 @@
   }
   @include respond(macbook) {
     width: 85%;
+    max-width: 1500px;
   }
 }

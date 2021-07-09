@@ -20,6 +20,7 @@
   }
 
   &__image {
+    width: 25rem;
     @include respond(big-desktop) {
       width: 35rem;
     }
@@ -40,6 +41,10 @@
     list-style: none;
     gap: 2rem;
     font-size: 1.8rem;
+
+    @include respond(big-desktop) {
+      font-size: 1.6rem;
+    }
 
     @include respond(small-laptop) {
       font-size: 1.5rem;

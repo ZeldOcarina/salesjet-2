@@ -19,6 +19,7 @@
   }
 
   &__logo {
+    width: 25rem;
     @include respond(big-tv) {
       width: 20rem;
     }
